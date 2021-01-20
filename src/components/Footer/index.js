@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
           <div className="row mt-5">
             <div className="col copyright">
-              <p className=""><small className="text-white-50">© 2019. All Rights Reserved.</small></p>
+              <p className=""><small className="text-white-50">© 2021. All Rights Reserved.</small></p>
             </div>
           </div>
         </div>

@@ -5,21 +5,24 @@ export default function Products() {
     const [produtos, setProdutos] = useState([]);
     const [categoria, setCategoria] = useState([]);
 
-    useEffect(() => {
+    function getProdutos() {
         async function showProdutos() {
-            const url = "http://localhost/php/full_stack_music/src/api/index.php?table=products";
+            const url = "http://localhost:5001/products";
             const resposta = await fetch(url);
             const resultado = await resposta.json();
             setProdutos(resultado);
         }
         showProdutos();
-    });
+    }
+
+    useEffect(() => { getProdutos() }, []);
+
+    useEffect(() => { }, [produtos]);
 
     function selectCategoria(e) {
         setCategoria("");
         setCategoria(e.target.value)
         return (console.log(categoria))
-
     }
 
     return (
@@ -53,8 +56,8 @@ export default function Products() {
                                     <div className="box_products text-dark pro" id={row.categories} >
                                         <img alt="" src={require(`${row.images}`).default} width={182} id="imagem" />
                                         <p className="descripton text-dark paragrafo">{row.descripton}</p>
-                                        <p className="text-danger paragrafo">{row.price} </p>
-                                        <p className="price text-dark paragrafo">{row.finalprice}</p>
+                                        <p className="text-danger paragrafo">${row.price} </p>
+                                        <p className="price text-dark paragrafo">${row.finalprice}</p>
 
                                     </div>)
 
@@ -63,8 +66,8 @@ export default function Products() {
                                     <div className="box_products text-dark pro" id={row.categories} >
                                         <img alt="" src={require(`${row.images}`).default} width={182} id="imagem" />
                                         <p className="descripton text-dark paragrafo">{row.descripton}</p>
-                                        <p className="text-danger paragrafo">{row.price} </p>
-                                        <p className="price text-dark paragrafo">{row.finalprice}</p>
+                                        <p className="text-danger paragrafo">${row.price} </p>
+                                        <p className="price text-dark paragrafo">${row.finalprice}</p>
 
                                     </div>
                                 )
@@ -75,6 +78,5 @@ export default function Products() {
                 </div>
             </div>
         </div>
-
     );
 }
