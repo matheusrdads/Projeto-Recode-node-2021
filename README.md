@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Criar um banco de dados para realização de testes com o arquivo no diretório src/DB
 ## Available Scripts
 
 In the project directory, you can run:
