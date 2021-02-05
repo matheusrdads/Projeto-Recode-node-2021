@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <div>
@@ -17,9 +17,9 @@ export default function Footer() {
               </ul>
             </div>
             <div className="col-lg-4 col-xs-12 location">
-              <h4 className="mt-lg-0 mt-sm-4">Location</h4> 
+              <h4 className="mt-lg-0 mt-sm-4">Location</h4>
               <Link to="stores">Stores</Link>
-    
+
             </div>
           </div>
           <div className="row mt-5">

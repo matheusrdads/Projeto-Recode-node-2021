@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Products() {
-    
+
     const [produtos, setProdutos] = useState([]);
     const [categoria, setCategoria] = useState([]);
 
@@ -35,13 +35,13 @@ export default function Products() {
                 <div className="col-sm-2">
                     <h3 >Categories</h3>
                     <ul className="list-group">
-                        <button  className="list-group-item list-group-item-action" onClick={selectCategoria} value=''>All(12)</button>
-                        <button  className="list-group-item list-group-item-action" onClick={selectCategoria} value='heavymetal'>Heavy Metal(3)</button>
-                        <button  className="list-group-item list-group-item-action" onClick={selectCategoria} value='blackmetal'>Black Metal(1)</button>
-                        <button  className="list-group-item list-group-item-action" onClick={selectCategoria} value='thrashmetal'>Thrash Metal(4) </button>
-                        <button  className="list-group-item list-group-item-action" onClick={selectCategoria} value='progressivemetal'>Progressive Rock(1) </button>
-                        <button  className="list-group-item list-group-item-action" onClick={selectCategoria} value='folkmetal'>Folk Metal (1)</button>
-                        <button  className="list-group-item list-group-item-action" onClick={selectCategoria} value='hardrock'>Hard Rock (2)</button>
+                        <button className="list-group-item list-group-item-action" onClick={selectCategoria} value=''>All(12)</button>
+                        <button className="list-group-item list-group-item-action" onClick={selectCategoria} value='heavymetal'>Heavy Metal(3)</button>
+                        <button className="list-group-item list-group-item-action" onClick={selectCategoria} value='blackmetal'>Black Metal(1)</button>
+                        <button className="list-group-item list-group-item-action" onClick={selectCategoria} value='thrashmetal'>Thrash Metal(4) </button>
+                        <button className="list-group-item list-group-item-action" onClick={selectCategoria} value='progressivemetal'>Progressive Rock(1) </button>
+                        <button className="list-group-item list-group-item-action" onClick={selectCategoria} value='folkmetal'>Folk Metal (1)</button>
+                        <button className="list-group-item list-group-item-action" onClick={selectCategoria} value='hardrock'>Hard Rock (2)</button>
                     </ul>
 
                 </div>
@@ -49,9 +49,9 @@ export default function Products() {
                 <div className="col-sm-10">
 
                     <div className="products_c">
-                        {produtos && produtos.map(row => { 
+                        {produtos && produtos.map(row => {
 
-                            if (categoria === row.categories) { 
+                            if (categoria === row.categories) {
                                 return (
                                     <div className="box_products text-dark pro" id={row.categories} >
                                         <img alt="" src={require(`${row.images}`).default} width={182} id="imagem" />

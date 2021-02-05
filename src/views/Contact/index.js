@@ -8,7 +8,7 @@ export default function Contact() {
     const [comentarios, setComentarios] = useState([]);
 
     function getComentario() {
-        async function showComentarios() { 
+        async function showComentarios() {
             const url = "http://localhost:5001/";
             const resposta = await fetch(url);
             const resultado = await resposta.json();
@@ -45,33 +45,33 @@ export default function Contact() {
 
                 </div>
             </div>
-           
-            <Form/>
+
+            <Form />
 
             <div className="text-white comments">
                 <div className="col-sm-9">
 
                     {comentarios && comentarios.map(row => {
-                        if (row.productname === null) { 
+                        if (row.productname === null) {
                             return (
                                 <div className="text-dark" key={row.id}>  Usuário: {row.nome} <br />
                                                                     Mensagem: {row.msg}  <br />
                                                                     Data: {row.date} <hr />
 
-                        </div>
-                        )
+                                </div>
+                            )
 
-                        } else{
+                        } else {
                             return (
                                 <div className="text-dark" key={row.id}>  Usuário: {row.nome} <br />
                                                                     Mensagem: {row.msg}  <br />
                                                                     Produto: {row.productname} <br />
                                                                     Data: {row.date} <hr />
 
-                        </div>
+                                </div>
                             )
                         }
-                        })
+                    })
                     }
                 </div>
             </div>
